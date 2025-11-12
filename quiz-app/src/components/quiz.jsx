@@ -17,7 +17,12 @@ function Quiz() {
         },
     ];
 
-    return <div> Quiz</div>; 
+    return (
+        <div> 
+            <h2> Question 1</h2>
+            <p> {questionsBank[0].question} </p>
+        </div> 
+    );
 }
 
 export default Quiz;
