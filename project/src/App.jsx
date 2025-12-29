@@ -1,14 +1,7 @@
 import React from 'react';
 import './App.css'
 import Header from './components/Header/Header';
-
-function MainGoal() {
-    return (
-        <p>
-            My main goal: Learn React in-depth and from the ground up
-        </p>
-    );
-}
+import MainGoal from "./components/MainGoal/MainGoal.jsx";
 
 function App() {
     return (
