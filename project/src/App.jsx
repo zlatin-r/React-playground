@@ -11,6 +11,7 @@ function App() {
             <MainGoal/>
             <menu>
                 <TabButton>JSX</TabButton>
+                <TabButton>REACT</TabButton>
             </menu>
         </div>
     );
