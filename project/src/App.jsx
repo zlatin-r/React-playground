@@ -7,6 +7,11 @@ function App() {
     return (
         <div id="app">
             <Header/>
+            <main>
+                <section id='main-container'>
+
+                </section>
+            </main>
         </div>
     );
 }
