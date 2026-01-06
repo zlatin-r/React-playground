@@ -22,7 +22,7 @@ main {
 }
 
 #main-nav ul {
-    width: 100%;
     display: flex;
-    align-content: space-between;
+    justify-content: center;
+    gap: 1rem;
 }
