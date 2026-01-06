@@ -1,3 +1,14 @@
 #main-nav ul li button {
+    background-color: transparent;
     color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    border-radius: 1rem;
+    padding: 5px 10px;
+}
+
+#main-nav ul li button:hover {
+    background-color: #5f33ec;
+    color: white;
+    cursor: pointer;
 }
