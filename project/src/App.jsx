@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {TABS_CONTENT} from './data';
 import './App.css'
 import Header from "./components/Header/Header.jsx";
 import TabButton from "./components/TabButton/TabButton.jsx";
@@ -13,6 +14,13 @@ function App() {
 
     let tabContent = <p>Please select tab</p>
 
+    if (selectedTopic) {
+        tabContent = (
+            <div>
+                <h3>{TABS_CONTENT[selectedTopic].text}</h3>
+            </div>
+        )
+    }
 
     return (
         <div id="app">
