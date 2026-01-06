@@ -12,3 +12,7 @@
     color: white;
     cursor: pointer;
 }
+
+#main-nav ul li button.active {
+    background-color: #5f33ec;
+}
