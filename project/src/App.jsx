@@ -11,6 +11,8 @@ function App() {
         setSelectedTopic(selectButton);
     }
 
+    let tabContent = <p>Please select tab</p>
+
 
     return (
         <div id="app">
@@ -19,11 +21,17 @@ function App() {
                 <section id='main-container'>
                     <nav id='main-nav'>
                         <ul>
-                            <TabButton onSelect={() => handleSelect('TabOne')}>TabOne</TabButton>
-                            <TabButton onSelect={() => handleSelect('TabTwo')}>TabTwo</TabButton>
-                            <TabButton onSelect={() => handleSelect('TabThree')}>TabThree</TabButton>
+                            <TabButton isSelected={selectedTopic === 'TabOne'}
+                                       onSelect={() => handleSelect('TabOne')}>TabOne</TabButton>
+                            <TabButton isSelected={selectedTopic === 'TabTwo'}
+                                       onSelect={() => handleSelect('TabTwo')}>TabTwo</TabButton>
+                            <TabButton isSelected={selectedTopic === 'TabThree'}
+                                       onSelect={() => handleSelect('TabThree')}>TabThree</TabButton>
                         </ul>
                     </nav>
+                </section>
+                <section id='tab-content'>
+                    {tabContent}
                 </section>
             </main>
         </div>
