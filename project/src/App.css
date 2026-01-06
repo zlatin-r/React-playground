@@ -25,3 +25,15 @@ main {
     justify-content: center;
     gap: 1.5rem;
 }
+
+#tab-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    min-height: 70vh;
+}
