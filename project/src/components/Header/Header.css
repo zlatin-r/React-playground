@@ -1,5 +1,10 @@
 header {
     text-align: center;
     color: white;
-    padding: 1rem;
+    padding: 0.5rem;
+    background: linear-gradient(
+            to bottom right,
+            var(--color-secondary),
+            var(--color-primary)
+    );
 }
