@@ -1,0 +1,12 @@
+footer {
+    margin-top: auto; /* 🔑 pushes footer to bottom */
+    text-align: center;
+    color: white;
+    padding: 0.5rem;
+    max-height: 4rem;
+    background: linear-gradient(
+            to bottom right,
+            var(--color-secondary),
+            var(--color-primary)
+    );
+}

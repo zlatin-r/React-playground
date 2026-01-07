@@ -2,6 +2,7 @@ import {useState} from 'react';
 import {TABS_CONTENT} from './data';
 import './App.css'
 import Header from "./components/Header/Header.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 import TabButton from "./components/TabButton/TabButton.jsx";
 
 
@@ -42,6 +43,7 @@ function App() {
                     {tabContent}
                 </section>
             </main>
+            <Footer/>
         </div>
     );
 }
