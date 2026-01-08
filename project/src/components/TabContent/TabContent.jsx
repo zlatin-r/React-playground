@@ -21,17 +21,18 @@ export default function TabContent() {
             </div>
         )
     }
+
     return (
         <>
             <Section id='main-container'>
                 <nav id='main-nav'>
                     <ul>
                         <TabButton isSelected={selectedTopic === 'TabOne'}
-                                   onSelect={() => handleSelect('TabOne')}>TabOne</TabButton>
+                                   onClick={() => handleSelect('TabOne')}>TabOne</TabButton>
                         <TabButton isSelected={selectedTopic === 'TabTwo'}
-                                   onSelect={() => handleSelect('TabTwo')}>TabTwo</TabButton>
+                                   onClick={() => handleSelect('TabTwo')}>TabTwo</TabButton>
                         <TabButton isSelected={selectedTopic === 'TabThree'}
-                                   onSelect={() => handleSelect('TabThree')}>TabThree</TabButton>
+                                   onClick={() => handleSelect('TabThree')}>TabThree</TabButton>
                     </ul>
                 </nav>
             </Section>

@@ -11,3 +11,17 @@
     min-height: 60vh;
     width: 90%;
 }
+
+#tab-content div h2 {
+    text-align: center;
+    margin: 5px 0 20px 0;
+}
+
+#tab-content div h3 {
+    text-align: left;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    width: 120vh;
+    min-height: 30rem;
+    padding: 1rem;
+}
