@@ -1,6 +1,15 @@
 import {TABS_CONTENT} from "../../data.jsx";
+import Section from "../Section/Section.jsx";
+import TabButton from "../TabButton/TabButton.jsx";
+import {useState} from "react";
 
 export default function TabContent() {
+    const [selectedTopic, setSelectedTopic] = useState();
+
+    function handleSelect(selectButton) {
+        setSelectedTopic(selectButton);
+    }
+
     let tabContent = <p>Please select tab</p>
 
     if (selectedTopic) {
@@ -11,8 +20,22 @@ export default function TabContent() {
         )
     }
     return (
-        <section id='tab-content'>
-            {tabContent}
-        </section>
+        <>
+            <Section id='main-container'>
+                <nav id='main-nav'>
+                    <ul>
+                        <TabButton isSelected={selectedTopic === 'TabOne'}
+                                   onSelect={() => handleSelect('TabOne')}>TabOne</TabButton>
+                        <TabButton isSelected={selectedTopic === 'TabTwo'}
+                                   onSelect={() => handleSelect('TabTwo')}>TabTwo</TabButton>
+                        <TabButton isSelected={selectedTopic === 'TabThree'}
+                                   onSelect={() => handleSelect('TabThree')}>TabThree</TabButton>
+                    </ul>
+                </nav>
+            </Section>
+            <Section title='This is the Tab Title' id='tab-content'>
+                {tabContent}
+            </Section>
+        </>
     )
 }
