@@ -15,6 +15,11 @@
 #tab-content div h2 {
     text-align: center;
     margin: 5px 0 20px 0;
+    background: linear-gradient(
+            to bottom right,
+            var(--color-secondary),
+            var(--color-primary)
+    );
 }
 
 #tab-content div h3 {
@@ -24,4 +29,9 @@
     width: 120vh;
     min-height: 30rem;
     padding: 1rem;
+    background: linear-gradient(
+            to bottom right,
+            var(--color-secondary),
+            var(--color-primary)
+    );
 }
