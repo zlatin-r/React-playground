@@ -2,6 +2,7 @@ import {TABS_CONTENT} from "../../data.jsx";
 import Section from "../Section/Section.jsx";
 import TabButton from "../TabButton/TabButton.jsx";
 import {useState} from "react";
+import './TabContent.css'
 
 export default function TabContent() {
     const [selectedTopic, setSelectedTopic] = useState();
@@ -15,6 +16,7 @@ export default function TabContent() {
     if (selectedTopic) {
         tabContent = (
             <div>
+                <h2>{TABS_CONTENT[selectedTopic].title}</h2>
                 <h3>{TABS_CONTENT[selectedTopic].text}</h3>
             </div>
         )
@@ -33,7 +35,7 @@ export default function TabContent() {
                     </ul>
                 </nav>
             </Section>
-            <Section title='This is the Tab Title' id='tab-content'>
+            <Section id='tab-content'>
                 {tabContent}
             </Section>
         </>

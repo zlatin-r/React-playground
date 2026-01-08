@@ -1,0 +1,13 @@
+#tab-content {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    color: white;
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    min-height: 60vh;
+    width: 90%;
+}

@@ -5,7 +5,6 @@ import TabContent from "./components/TabContent/TabContent.jsx";
 
 
 function App() {
-
     return (
         <div id="app">
             <Header/>
