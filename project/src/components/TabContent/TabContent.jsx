@@ -1,6 +1,7 @@
 import {TABS_CONTENT} from "../../data.jsx";
 import Section from "../Section/Section.jsx";
 import TabButton from "../TabButton/TabButton.jsx";
+import Tabs from "../Tabs/Tabs.jsx";
 import {useState} from "react";
 import './TabContent.css'
 
@@ -26,14 +27,18 @@ export default function TabContent() {
         <>
             <Section id='main-container'>
                 <nav id='main-nav'>
-                    <ul>
-                        <TabButton isSelected={selectedTopic === 'TabOne'}
-                                   onClick={() => handleSelect('TabOne')}>TabOne</TabButton>
-                        <TabButton isSelected={selectedTopic === 'TabTwo'}
-                                   onClick={() => handleSelect('TabTwo')}>TabTwo</TabButton>
-                        <TabButton isSelected={selectedTopic === 'TabThree'}
-                                   onClick={() => handleSelect('TabThree')}>TabThree</TabButton>
-                    </ul>
+                    <Tabs
+                        ButtonsContainer="ul"
+                        buttons={
+                            <>
+                                <TabButton isSelected={selectedTopic === 'TabOne'}
+                                           onClick={() => handleSelect('TabOne')}>TabOne</TabButton>
+                                <TabButton isSelected={selectedTopic === 'TabTwo'}
+                                           onClick={() => handleSelect('TabTwo')}>TabTwo</TabButton>
+                                <TabButton isSelected={selectedTopic === 'TabThree'}
+                                           onClick={() => handleSelect('TabThree')}>TabThree</TabButton>
+                            </>}>
+                    </Tabs>
                 </nav>
             </Section>
             <Section id='tab-content'>
