@@ -4,5 +4,5 @@ export default function Tabs({children, buttons, ButtonsContainer}) {
             <ButtonsContainer>{buttons}</ButtonsContainer>
             {children}
         </>
-    )
+    );
 }
