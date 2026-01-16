@@ -11,7 +11,6 @@ const initialGameBoard = [
     [null, null, null],
 ];
 
-
 function deriveActivePlayer(gameTurns) {
     let currentPlayer = 'X';
 
@@ -44,7 +43,7 @@ function App() {
         const secondSquareSymbol = gameBoard[combination[1].row][combination[1].col];
         const thirdSquareSymbol = gameBoard[combination[2].row][combination[2].col];
 
-        if(
+        if (
             firstSquareSymbol &&
             firstSquareSymbol === secondSquareSymbol &&
             firstSquareSymbol === thirdSquareSymbol
@@ -54,7 +53,6 @@ function App() {
     }
 
     function handleSelectSquare(rowIndex, colIndex) {
-
         // setActivePlayer((curActivePlayer) => curActivePlayer === 'X' ? 'O' : 'X');
         setGameTurns(prevTurns => {
             const currentPlayer = deriveActivePlayer(prevTurns);
@@ -75,9 +73,9 @@ function App() {
                     <Player initialName="Player 2" symbol="O" isActive={activePlayer === 'O'}/>
                 </ol>
                 {winner && <p>You won, {winner}!</p>}
-                <GameBoard onSelectSquare={handleSelectSquare} board={gameTurns} />
+                <GameBoard onSelectSquare={handleSelectSquare} board={gameBoard}/>
             </div>
-            <Log turns={gameTurns} />
+            <Log turns={gameTurns}/>
         </main>
     )
 }
